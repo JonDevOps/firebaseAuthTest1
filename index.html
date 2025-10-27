@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Hello World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main id="app">
+        <!-- Not logged in view -->
+        <div id="auth-container" class="form-container">
+            <h1>Create Account</h1>
+            <input type="email" id="email-signup" placeholder="Email">
+            <input type="password" id="password-signup" placeholder="Password">
+            <button id="signup-btn">Sign Up</button>
+
+            <br><br>
+
+            <h1>Log In</h1>
+            <input type="email" id="email-login" placeholder="Email">
+            <input type="password" id="password-login" placeholder="Password">
+            <button id="login-btn">Log In</button>
+
+            <p id="error-message" class="error"></p>
+        </div>
+
+        <!-- Logged in view -->
+        <div id="hello-container" class="hidden">
+            <h1>Hello, <span id="user-email"></span>!</h1>
+            <p>You have successfully logged in.</p>
+            <button id="logout-btn">Log Out</button>
+        </div>
+    </main>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-auth-compat.js"></script>
+    
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
